@@ -5,7 +5,7 @@ class Human:
         #self.__id = id
         ids = set()
         if __id in self.ids:
-            raise Exception('id already exists')
+            raise Exception('id"s already exists')
         elif id is None:
             if len(self.ids) == 0:           #(why so? condition is in previous string)
                 self.__id = 0
