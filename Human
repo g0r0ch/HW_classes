@@ -1,6 +1,18 @@
 class Human:
     def __init__ (name: str, last_name: str, id=None):
-
-         self.name = name
-         self.last_name = last_name
-         self.__id = id
+        self.name = name
+        self.last_name = last_name
+        #self.__id = id
+        ids = set()
+        if __id in self.ids:
+            raise Exception('id already exists')
+        elif id is None:
+            if len(self.ids) == 0:           #(why so? condition is in previous string)
+                self.__id = 0
+                self.ids.add(self.__id)
+            else:
+                 self.__id = max(self.ids) + 1
+                 self.ids.add(self.__id)
+        else:
+            self.__id = id
+            self.ids.add(self.__id)
