@@ -1,3 +1,6 @@
 class Human:
-    name: str
-    last_name: str
+    def __init__ (name: str, last_name: str, id=None):
+
+         self.name = name
+         self.last_name = last_name
+         self.__id = id
