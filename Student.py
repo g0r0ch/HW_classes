@@ -9,24 +9,25 @@ class Student(Human):
 
 
     def set_class(self, group):
-        pass
+        self.group = group
 
     def get_class(self):
-        pass
+        self.group = group
 
-
- def set_class(self, cl: Class):
-        if isinstance(cl, Class):
-            self._class = cl
-            cl.append(self)
-        else:
-            raise Exception("Данный экземляр класса не найден")
-
-    def get_class(self):
-        return self._class
 
     def __str__(self):
-        return f'Ученик {self.name} {self.last_name}, {self._class}'
+        return f'Ученик {self.name} {self.last_name}, {self.group}'
 
     def __repr__(self):
         return f'{self.name} {self.last_name}'
+
+
+ # def set_class(self, cl: Class):
+ #        if isinstance(cl, Class):
+ #            self._class = cl
+ #            cl.append(self)
+ #        else:
+ #            raise Exception("Данный экземляр класса не найден")
+ #
+ #    def get_class(self):
+ #        return self._class

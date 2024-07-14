@@ -13,3 +13,5 @@ class Subject(Enum):
     BIOLOGY = 'Биология'
     HISTORY = 'История'
    
+
+
