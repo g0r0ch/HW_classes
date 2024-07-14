@@ -1,3 +1,5 @@
+#- Добавьте предметов в класс предметов
+
 from enum import Enum
 
 from typing import List
