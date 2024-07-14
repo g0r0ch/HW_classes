@@ -6,3 +6,37 @@ class Class(list):
     ...
     def __getitem__(self, name):
         ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def write_csv(self):
+        with open('testlist.csv', mode='w') as f:
+            writer = csv.writer(f, delimiter=',', lineterminator='\r')
+            writer.writerow(["Имя", "Фамилия"])
+            writer.writerow([self._homeroom_teacher.name, self._homeroom_teacher.last_name])
+            for st in self._students:
+                writer.writerow([st.name, st.last_name])
+
+    def read_csv(self):
+        with open('testlist.csv') as f1:
+            file_reader = csv.DictReader(f1, delimiter=',')
+            count = 0
+            for row in file_reader:
+                if count == 0:
+                    print(f'Преподаватель: {row["Имя"]} {row["Фамилия"]}', end='\n')
+                    print("Список учеников:")
+                    count += 1
+                else:
+                    print(f'{row["Имя"]} {row["Фамилия"]}', end='\n')
+                    count += 1
